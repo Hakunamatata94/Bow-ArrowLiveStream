@@ -28,12 +28,15 @@ public abstract class SteamVR_Status : MonoBehaviour
 
 	void OnEnable()
 	{
-		SteamVR_Utils.Event.Listen(message, OnEvent);
-	}
+		//SteamVR_Utils.Event.Listen(message, OnEvent);
+        //SteamVR_Events.Action(message, OnEvent);
+        //SteamVR_Events.DeviceConnected.Listen(OnEvent);
+        //  SteamVR_Events.System("message").Listen(OnTrackedDeviceRoleChanged);
+    }
 
 	void OnDisable()
 	{
-		SteamVR_Utils.Event.Remove(message, OnEvent);
+		//! SteamVR_Utils.Event.Remove(message, OnEvent);
 	}
 
 	void OnEvent(params object[] args)
